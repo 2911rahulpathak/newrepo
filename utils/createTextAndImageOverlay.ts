@@ -17,7 +17,7 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
 
     const text = currency === Currency.USD ? data.result.ethusd : data.result.ethbtc;
 
-    const canvas = createCanvas(800, 600);
+    const canvas = createCanvas(256, 417);
     const ctx = canvas.getContext('2d');
 
     ctx.fillStyle = '#fff';
@@ -36,6 +36,7 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
 
     return newImageBuffer;
   } catch (error) {
+    console.error('Error:', error);
     const ethImagePath = path.resolve('./public/ETH.png');
     return ethImagePath;
   }
