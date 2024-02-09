@@ -26,7 +26,7 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
 
     const textBuffer = canvas.toBuffer('image/png');
 
-    const ethImagePath = path.resolve('./public/ETH.png');
+    const ethImagePath = path.resolve('./public/ETHRed.png');
 
     const ethImageBuffer = fs.readFileSync(ethImagePath);
 
