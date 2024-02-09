@@ -1,4 +1,4 @@
-import { createCanvas } from 'canvas';
+import { createCanvas, registerFont } from 'canvas';
 import sharp from 'sharp';
 import fs from 'fs';
 import path from 'path';
@@ -20,13 +20,17 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
     const canvas = createCanvas(256, 417);
     const ctx = canvas.getContext('2d');
 
+    registerFont(path.resolve('./public/fonts/Montserrat-BoldItalic.ttf'), {
+      family: 'CustomFont',
+    });
+
     ctx.fillStyle = '#fff';
-    ctx.font = '20px Arial';
+    ctx.font = '20px CustomFont';
     ctx.fillText(textCurrent, 10, 200);
 
     const textBuffer = canvas.toBuffer('image/png');
 
-    const ethImagePath = path.resolve('./public/ETHRed.png');
+    const ethImagePath = path.resolve('./public/ETH.png');
 
     const ethImageBuffer = fs.readFileSync(ethImagePath);
 
