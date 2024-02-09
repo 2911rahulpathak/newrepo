@@ -40,7 +40,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         },
       ],
       image: {
-        src: dataUrl,
+        src: `${NEXT_PUBLIC_URL}/ETH.png`,
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
