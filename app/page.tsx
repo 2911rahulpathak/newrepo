@@ -9,12 +9,12 @@ const frameMetadata = getFrameMetadata({
     },
 
     {
-      action: 'post_redirect',
       label: 'ETH / USD',
+      action: 'post',
     },
     {
       label: 'ETH / BTC',
-      action: 'post_redirect',
+      action: 'post',
     },
   ],
   image: {
