@@ -18,7 +18,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   //   button: 2,
   // };
   let curr = Currency.USD;
-  if (message?.button === 1) {
+  if (message?.button === 3) {
     curr = Currency.BTC;
   }
   const { textCurrent, newImageBuffer } = await createTextImageAndOverlay(curr);
