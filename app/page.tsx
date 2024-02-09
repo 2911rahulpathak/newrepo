@@ -18,7 +18,7 @@ const frameMetadata = getFrameMetadata({
     // },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/ETH.png`,
+    src: `${NEXT_PUBLIC_URL}/park-1.png`,
     aspectRatio: '1:1',
   },
 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ETH Price',
     description: 'Get real-time ETH price!',
-    images: [`${NEXT_PUBLIC_URL}/ETH.png`],
+    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
   },
   other: {
     ...frameMetadata,
