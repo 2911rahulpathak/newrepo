@@ -2,14 +2,14 @@
   "name": "a-frame-in-100-lines",
   "version": "0.3.0",
   "scripts": {
-    "build": "rm -rf .next && next build",
+    "build": "next build",
     "dev": "next dev",
     "format": "prettier --log-level warn --write .",
     "start": "next start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "https://twitter.com/Zizzamia",
+  "author": "https://warpcast.com/bytebrush",
   "license": "MIT",
   "dependencies": {
     "@coinbase/onchainkit": "0.5.4",
