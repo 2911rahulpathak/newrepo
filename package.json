@@ -1,5 +1,5 @@
 {
-  "name": "a-frame-in-100-lines",
+  "name": "eth_price_frame",
   "version": "0.3.0",
   "scripts": {
     "build": "next build",
