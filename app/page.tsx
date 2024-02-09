@@ -16,17 +16,17 @@ const frameMetadata = getFrameMetadata({
       label: 'Redirect to pictures',
       action: 'post_redirect',
     },
-    // {
-    //   action: 'post_redirect',
-    //   label: 'ETH / USD',
-    // },
-    // {
-    //   label: 'ETH / BTC',
-    //   action: 'post_redirect',
-    // },
+    {
+      action: 'post_redirect',
+      label: 'ETH / USD',
+    },
+    {
+      label: 'ETH / BTC',
+      action: 'post_redirect',
+    },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-1.png`,
+    src: `${NEXT_PUBLIC_URL}/ETH.png`,
     aspectRatio: '1:1',
   },
 
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ETH Price',
     description: 'Get real-time ETH price!',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    images: [`${NEXT_PUBLIC_URL}/ETH.png`],
   },
   other: {
     ...frameMetadata,
