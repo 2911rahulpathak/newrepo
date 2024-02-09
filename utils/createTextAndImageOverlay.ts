@@ -22,7 +22,7 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
 
     ctx.fillStyle = '#fff';
     ctx.font = '48px serif';
-    ctx.fillText(text, 10, 50);
+    ctx.fillText(text, 10, 200);
 
     const textBuffer = canvas.toBuffer('image/png');
 
