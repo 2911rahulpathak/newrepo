@@ -15,14 +15,14 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   // const message = {
   //   button: 2,
   // };
-  let curr = Currency.USD;
-  if (message?.button === 2) {
-    curr = Currency.BTC;
-  }
-  const returnImage = await createTextImageAndOverlay(curr);
+  // let curr = Currency.USD;
+  // if (message?.button === 2) {
+  //   curr = Currency.BTC;
+  // }
+  // const returnImage = await createTextImageAndOverlay(curr);
 
-  const base64Image = returnImage.toString('base64');
-  const dataUrl = `data:image/png;base64,${base64Image}`;
+  // const base64Image = returnImage.toString('base64');
+  // const dataUrl = `data:image/png;base64,${base64Image}`;
 
   return new NextResponse(
     getFrameHtmlResponse({
