@@ -30,17 +30,17 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
         {
           label: 'Get current ETH Price!',
         },
-        // {
-        //   action: 'post',
-        //   label: 'ETH / USD',
-        // },
-        // {
-        //   label: 'ETH / BTC',
-        //   action: 'post',
-        // },
+        {
+          action: 'post',
+          label: 'ETH / USD',
+        },
+        {
+          label: 'ETH / BTC',
+          action: 'post',
+        },
       ],
       image: {
-        src: `${NEXT_PUBLIC_URL}/ETH.png`,
+        src: dataUrl,
       },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
