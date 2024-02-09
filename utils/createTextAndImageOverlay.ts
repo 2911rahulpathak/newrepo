@@ -24,7 +24,7 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
       family: 'CustomFont',
     });
 
-    ctx.fillStyle = '#6093CA';
+    ctx.fillStyle = '#FDFD96';
     ctx.font = '48px CustomFont';
     ctx.fillText(textCurrent, 10, 200);
 
@@ -35,7 +35,7 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
     const ethImageBuffer = fs.readFileSync(ethImagePath);
 
     const newImageBuffer = await sharp(ethImageBuffer)
-      .composite([{ input: textBuffer, gravity: 'southeast' }])
+      .composite([{ input: textBuffer }])
       .toBuffer();
 
     return { textCurrent, newImageBuffer };
