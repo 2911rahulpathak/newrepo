@@ -8,14 +8,14 @@ const frameMetadata = getFrameMetadata({
     {
       label: 'Get current ETH Price!',
     },
-    {
-      action: 'post',
-      label: 'ETH / USD',
-    },
-    {
-      label: 'ETH / BTC',
-      action: 'post',
-    },
+    // {
+    //   action: 'post_redirect',
+    //   label: 'ETH / USD',
+    // },
+    // {
+    //   label: 'ETH / BTC',
+    //   action: 'post_redirect',
+    // },
   ],
   image: {
     src: `${NEXT_PUBLIC_URL}/ETH.png`,
@@ -42,7 +42,6 @@ export default function Page() {
   return (
     <>
       <h1>
-        {NEXT_PUBLIC_URL}
         follow <a href="https://warpcast.com/bytebrush">@bytebrush</a>
       </h1>
     </>

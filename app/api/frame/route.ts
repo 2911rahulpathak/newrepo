@@ -5,15 +5,15 @@ import { Currency } from '../../../utils/enums';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL;
-  // const body: FrameRequest = await req.json();
-  // const { message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
-  const message = {
-    button: 2,
-  };
+  const body: FrameRequest = await req.json();
+  const { message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
+  // const message = {
+  //   button: 2,
+  // };
   let curr = Currency.USD;
-  if (message?.button === 2) {
-    curr = Currency.BTC;
-  }
+  // if (message?.button === 2) {
+  //   curr = Currency.BTC;
+  // }
   const returnImage = await createTextImageAndOverlay(curr);
 
   const base64Image = returnImage.toString('base64');
@@ -21,29 +21,28 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
 
   return new NextResponse(
     getFrameHtmlResponse({
-      image: {
-        src: `${NEXT_PUBLIC_URL}/ETH.png`,
-      },
       buttons: [
         {
           label: 'Get current ETH Price!',
         },
-        {
-          action: 'post',
-          label: 'ETH / USD',
-        },
-        {
-          label: 'ETH / BTC',
-          action: 'post',
-        },
+        // {
+        //   action: 'post',
+        //   label: 'ETH / USD',
+        // },
+        // {
+        //   label: 'ETH / BTC',
+        //   action: 'post',
+        // },
       ],
+      image: {
+        src: `${NEXT_PUBLIC_URL}/ETH.png`,
+      },
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
   );
 }
 
 export async function POST(req: NextRequest): Promise<Response> {
-  console.log('req', req);
   return getResponse(req);
 }
 
