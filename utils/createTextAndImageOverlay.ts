@@ -15,14 +15,14 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
     }
     const data = await response.json();
 
-    const text = currency === Currency.USD ? data.result.ethusd : data.result.ethbtc;
+    const textCurrent = currency === Currency.USD ? data.result.ethusd : data.result.ethbtc;
 
     const canvas = createCanvas(256, 417);
     const ctx = canvas.getContext('2d');
 
     ctx.fillStyle = '#fff';
     ctx.font = '48px serif';
-    ctx.fillText(text, 10, 200);
+    ctx.fillText(textCurrent, 10, 200);
 
     const textBuffer = canvas.toBuffer('image/png');
 
@@ -34,10 +34,10 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
       .composite([{ input: textBuffer, gravity: 'southeast' }])
       .toBuffer();
 
-    return newImageBuffer;
+    return { textCurrent, newImageBuffer };
   } catch (error) {
     console.error('Error:', error);
     const ethImagePath = path.resolve('./public/ETH.png');
-    return ethImagePath;
+    return { textCurrent: error, ethImagePath: ethImagePath };
   }
 };
