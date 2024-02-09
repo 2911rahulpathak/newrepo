@@ -2,9 +2,9 @@ import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/o
 import { NextRequest, NextResponse } from 'next/server';
 // import { createTextImageAndOverlay } from '../../../utils/createTextAndImageOverlay';
 // import { Currency } from '../../../utils/enums';
+import { NEXT_PUBLIC_URL } from '../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
-  const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL;
   const body: FrameRequest = await req.json();
   let accountAddress: string | undefined = '';
   const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
