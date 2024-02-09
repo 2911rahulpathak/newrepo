@@ -17,9 +17,7 @@
     "react-dom": "^18",
     "sharp": "^0.33.2",
     "@coinbase/onchainkit": "0.5.4",
-    "bufferutil": "^4.0.8",
     "canvas": "^2.11.2",
-    "utf-8-validate": "^6.0.3",
     "viem": "^2.7.1"
   },
   "devDependencies": {
