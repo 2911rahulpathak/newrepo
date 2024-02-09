@@ -22,7 +22,7 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
   return new NextResponse(
     getFrameHtmlResponse({
       image: {
-        src: dataUrl,
+        src: `${NEXT_PUBLIC_URL}/ETH.png`,
       },
       buttons: [
         {
