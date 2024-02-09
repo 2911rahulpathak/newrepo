@@ -2,7 +2,7 @@
   "name": "eth_price_frame",
   "version": "0.3.0",
   "scripts": {
-    "build": "next build",
+    "build": "rm -rf .next && next build",
     "dev": "next dev",
     "format": "prettier --log-level warn --write .",
     "start": "next start",
