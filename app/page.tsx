@@ -42,6 +42,7 @@ export default function Page() {
   return (
     <>
       <h1>
+        {NEXT_PUBLIC_URL}
         follow <a href="https://warpcast.com/bytebrush">@bytebrush</a>
       </h1>
     </>

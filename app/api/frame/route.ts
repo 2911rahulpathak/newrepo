@@ -24,6 +24,19 @@ async function getResponse(req: NextRequest): Promise<NextResponse> {
       image: {
         src: dataUrl,
       },
+      buttons: [
+        {
+          label: 'Get current ETH Price!',
+        },
+        {
+          action: 'post',
+          label: 'ETH / USD',
+        },
+        {
+          label: 'ETH / BTC',
+          action: 'post',
+        },
+      ],
       postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
     }),
   );
