@@ -1,16 +1,21 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit';
 import { NextRequest, NextResponse } from 'next/server';
 // import { createTextImageAndOverlay } from '../../../utils/createTextAndImageOverlay';
-import { Currency } from '../../../utils/enums';
+// import { Currency } from '../../../utils/enums';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
   const NEXT_PUBLIC_URL = process.env.NEXT_PUBLIC_URL;
   const body: FrameRequest = await req.json();
-  const { message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
+  let accountAddress: string | undefined = '';
+  const { isValid, message } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
+
+  if (isValid) {
+    accountAddress = message.interactor.verified_accounts[0];
+  }
   // const message = {
   //   button: 2,
   // };
-  let curr = Currency.USD;
+  // let curr = Currency.USD;
   // if (message?.button === 2) {
   //   curr = Currency.BTC;
   // }

@@ -8,6 +8,15 @@ const frameMetadata = getFrameMetadata({
     {
       label: 'Get current ETH Price!',
     },
+    {
+      action: 'link',
+      label: 'Link to Google',
+      target: 'https://www.google.com',
+    },
+    {
+      label: 'Redirect to pictures',
+      action: 'post_redirect',
+    },
     // {
     //   action: 'post_redirect',
     //   label: 'ETH / USD',
