@@ -1,7 +1,7 @@
 import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit';
 import { NextRequest, NextResponse } from 'next/server';
 // import { createTextImageAndOverlay } from '../../../utils/createTextAndImageOverlay';
-import { Currency } from '../../../utils/enums';
+// import { Currency } from '../../../utils/enums';
 import { NEXT_PUBLIC_URL } from '../../config';
 
 async function getResponse(req: NextRequest): Promise<NextResponse> {
