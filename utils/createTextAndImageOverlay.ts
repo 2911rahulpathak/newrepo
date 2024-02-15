@@ -21,11 +21,11 @@ export const createTextImageAndOverlay = async (currency: Currency) => {
     const ctx = canvas.getContext('2d');
 
     registerFont(path.resolve('./public/fonts/Montserrat-BoldItalic.ttf'), {
-      family: 'CustomFont',
+      family: 'Montserrat-BoldItalic',
     });
 
     ctx.fillStyle = '#FDFD96';
-    ctx.font = '48px CustomFont';
+    ctx.font = '48px Montserrat';
     ctx.fillText(textCurrent, 10, 180);
 
     const textBuffer = canvas.toBuffer('image/png');

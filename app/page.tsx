@@ -26,6 +26,7 @@ const frameMetadata = getFrameMetadata({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(NEXT_PUBLIC_URL),
   title: 'ETH Price',
   description: 'Get real-time ETH price!',
   openGraph: {
